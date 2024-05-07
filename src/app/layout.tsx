@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { Golos_Text } from 'next/font/google';
-import './globals.css';
+import './globals.scss';
 
 const font = Golos_Text({ subsets: ['latin'] });
 
