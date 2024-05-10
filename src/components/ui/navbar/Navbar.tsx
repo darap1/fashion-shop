@@ -2,6 +2,7 @@ import { FC } from 'react';
 import styles from './Navbar.module.scss';
 import Link from 'next/link';
 import { menu } from './menu.data';
+import NavItem from './NavItem';
 
 const Navbar: FC = () => {
 	return (
@@ -12,7 +13,7 @@ const Navbar: FC = () => {
 				</Link>
 				<nav className={styles.nav}>
 					{menu.map((item) => (
-						<div>item</div>
+						<NavItem key={item.link} item={item} />
 					))}
 				</nav>
 			</div>
