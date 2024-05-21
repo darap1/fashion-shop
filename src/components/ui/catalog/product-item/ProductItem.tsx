@@ -3,6 +3,7 @@ import { IProduct } from '@/types/product.interface';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FC } from 'react';
+import { converPrice } from './../../../../utils/convert-price';
 
 const ProductItem: FC<{ product: IProduct }> = ({ product }) => {
 	return (
@@ -24,9 +25,9 @@ const ProductItem: FC<{ product: IProduct }> = ({ product }) => {
 					</h3>
 					<p className='mt-1 text-sm text-gray-500'>{product.category}</p>
 				</div>
-				{/* <p className='text-sm font-medium text-gray-900'>
-					{convertPrice(product.price)}
-				</p> */}
+				<p className='text-sm font-medium text-gray-900'>
+					{converPrice(product.price)}
+				</p>
 			</div>
 		</div>
 	);
